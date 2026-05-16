@@ -1579,6 +1579,154 @@
   }
   /* END MASIH ADA PERTANYAAN */
 
+
+  /* ═══════════════════════════════════════════════
+     MEDIUM-STYLE TYPOGRAPHY SYSTEM
+     Body: Charter → Georgia → serif (20px / 1.58)
+     Heading: Söhne → Helvetica Neue → sans (kept Cormorant for dramatic hero)
+     Color: rgba(255,255,255,0.84) — tidak pure white, kurangi eye strain
+  ═══════════════════════════════════════════════ */
+
+  :root {
+    --font-body-serif: 'Charter', 'Bitstream Charter', Georgia, Cambria, 'Times New Roman', serif;
+    --font-heading-sans: 'Söhne', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    --text-body-color: rgba(255, 255, 255, 0.84);
+    --text-body-size: 1.2rem;       /* ~19px */
+    --text-body-lh: 1.58;           /* Medium's magic line-height */
+  }
+
+  /* ── BODY TEXT — semua elemen paragraf ── */
+  .hero-sub,
+  .pattern-text,
+  .fear-list li,
+  .tujuan-desc,
+  .tujuan-sub,
+  .origin-desc,
+  .terminal-content-text p,
+  .price-desc,
+  .split-list li,
+  .pola-bottom p,
+  .notfor-text,
+  .cta-sub,
+  .cutoff-label,
+  .mek-val {
+    font-family: var(--font-body-serif) !important;
+    font-size: var(--text-body-size) !important;
+    line-height: var(--text-body-lh) !important;
+    color: var(--text-body-color) !important;
+    font-weight: 400 !important;
+    letter-spacing: 0.01em;
+  }
+
+  /* Override sizing khusus per elemen */
+  .origin-desc {
+    font-size: 1.05rem !important;   /* origin grid lebih kecil, banyak item */
+  }
+
+  .tujuan-desc {
+    font-size: 1.05rem !important;
+  }
+
+  .notfor-text {
+    font-size: 1.1rem !important;
+    line-height: 1.6 !important;
+  }
+
+  .cutoff-label {
+    font-family: var(--font-body-serif) !important;
+    font-size: 0.95rem !important;
+    line-height: 1.5 !important;
+  }
+
+  .cta-sub {
+    font-size: 1.15rem !important;
+    line-height: 1.65 !important;
+  }
+
+  /* ── HERO SUB — slightly larger, more presence ── */
+  .hero-sub {
+    font-size: 1.25rem !important;
+    line-height: 1.7 !important;
+    max-width: 560px;
+  }
+
+  /* ── SECTION BIG HEADINGS — Söhne stack, tighter ── */
+  .big-h2 {
+    font-family: var(--font-heading-sans) !important;
+    font-weight: 600 !important;
+    letter-spacing: -0.025em !important;
+  }
+
+  /* ── HERO H1 tetap Cormorant — itu DNA, jangan diubah ── */
+  .hero-h1 {
+    font-family: 'Cormorant Garamond', serif !important;
+    font-weight: 300 !important;
+    letter-spacing: -0.02em !important;
+  }
+
+  /* ── CTA H2 tetap Cormorant — dramatic close ── */
+  .cta-h2 {
+    font-family: 'Cormorant Garamond', serif !important;
+  }
+
+  /* ── Quote section — Cormorant OK, tapi kurangi ukuran biar tidak overpowering ── */
+  .quote-text {
+    font-size: clamp(1.1rem, 2.5vw, 1.6rem) !important;
+    font-family: var(--font-body-serif) !important;
+    font-style: normal !important;
+    font-weight: 400 !important;
+    line-height: 1.75 !important;
+    color: var(--text-body-color) !important;
+  }
+
+  /* ── SPLIT LIST — agak besar karena perbandingan penting ── */
+  .split-list li {
+    font-size: 1.05rem !important;
+    padding: 1.4rem 0 !important;
+  }
+
+  /* ── FEAR INTRO — keep Cormorant tapi tighten line-height ── */
+  .fear-intro {
+    font-family: 'Cormorant Garamond', serif !important;
+    line-height: 1.45 !important;
+  }
+
+  /* ── FEAR BOTTOM TEXT — keep Cormorant, ini pull quote ── */
+  .fear-bottom-text {
+    font-family: 'Cormorant Garamond', serif !important;
+  }
+
+  /* ── PRICE PULL QUOTE — keep Cormorant italic ── */
+  .price-pull-quote {
+    font-family: 'Cormorant Garamond', serif !important;
+  }
+
+  /* ── TERMINAL content text — slightly smaller karena technical ── */
+  .terminal-content-text p {
+    font-size: 1.1rem !important;
+    line-height: 1.7 !important;
+  }
+
+  /* ── MOBILE — Medium turunkan ke 18px di mobile ── */
+  @media (max-width: 768px) {
+    :root {
+      --text-body-size: 1.1rem;     /* ~18px */
+      --text-body-lh: 1.6;
+    }
+
+    .hero-sub {
+      font-size: 1.1rem !important;
+    }
+
+    .cta-sub {
+      font-size: 1.05rem !important;
+    }
+
+    .big-h2 {
+      font-size: clamp(1.8rem, 6vw, 2.5rem) !important;
+    }
+  }
+
 </style>
 </head>
 <body>
@@ -1602,8 +1750,11 @@
     saat motivasi hilang.
   </h1>
   <p class="hero-sub">
-    Hidup berubah bukan saat kamu menyadari,<br>
-    Tapi saat <strong style="color:var(--gold);font-weight:700;">rutinitas bernilai tetap berjalan</strong> meski emosi berubah.
+    Hidup jarang runtuh karena satu kegagalan besar.<br>
+    Biasanya runtuh karena terlalu sering restart,<br>
+    dan terlalu mudah menghilang dari rutinitas yang penting.<br><br>
+    <strong style="color:var(--gold);font-weight:700;">Silent Enforcer dibuat untuk satu hal:</strong><br>
+    menjaga rutinitas bernilai tetap hadir, meski emosi berubah.
   </p>
   <div class="hero-cta">
     <a href="https://wa.me/6289517370017?text=Saya%20ingin%20masuk%20Silent%20Enforcer%20dan%20memulai%20covenant." class="btn-primary">Apply Sekarang</a>
@@ -1652,12 +1803,12 @@
     <div class="mek-col reveal-right">
       <div class="mek-row">
         <span class="mek-key k-jalan">jalan</span>
-        <span class="mek-dash">—</span>
+        <span class="mek-dash">:</span>
         <span class="mek-val">Quest selesai hari ini.</span>
       </div>
       <div class="mek-row">
         <span class="mek-key k-stall">stall</span>
-        <span class="mek-dash">—</span>
+        <span class="mek-dash">:</span>
         <span class="mek-val">Gagal, tapi jujur hadir.</span>
       </div>
       <div class="mek-rule">
@@ -1713,9 +1864,9 @@
   <div class="section-label reveal">Ujung Setiap Hidup</div>
 
   <p class="fear-intro reveal delay-1">
-    Kamu sudah melihatnya.<br>
-    Dua tipe orang yang hidup berbeda,<br>
-    tapi <strong style="color:var(--gold);font-weight:700;">awalnya sama persis</strong><br>
+    Kamu sudah melihat keduanya.<br>
+    Dua tipe orang yang hidupnya berakhir sangat berbeda,<br>
+    tapi <strong style="color:var(--gold);font-weight:700;">titik awalnya sama persis</strong><br>
     seperti kamu sekarang.
   </p>
 
@@ -1750,8 +1901,8 @@
     <div class="fear-bottom-line"></div>
     <p class="fear-bottom-text">
       Mungkin kamu sudah melihat salah satunya di cermin.<br>
-      Pertanyaannya bukan "siapa yang kamu inginkan"<br>
-      tapi "<em>apa yang kamu lakukan hari ini</em>" yang menentukan.
+      Pertanyaannya bukan siapa yang kamu inginkan,<br>
+      tapi <em>apa yang kamu lakukan hari ini.</em>
     </p>
   </div>
 </section>
@@ -1818,7 +1969,8 @@
         Tidak ada "hampir". Tidak ada alasan. Tidak ada negosiasi.
       </p>
       <p style="color:var(--gray-light);font-size:1rem;line-height:1.9;margin-top:1rem;font-weight:300;">
-        Sistem mencatat. Sistem mengevaluasi. Sistem memantulkan fakta dari perilakumu sendiri.
+        Sistem mencatat. Sistem mengevaluasi.<br>
+        Yang dipantulkan bukan motivasi. Tapi pola perilakumu sendiri.
       </p>
       <div class="cutoff-bar" style="margin-top:2.5rem;">
         <div class="cutoff-time">04:00<span style="font-size:0.7rem;margin-left:0.3rem;">WIB</span></div>
@@ -1836,12 +1988,15 @@
     <div>
       <div class="section-label reveal">Tujuan Sistem</div>
       <h2 class="big-h2 reveal delay-1">
-        Silent Enforcer tidak menjanjikan sukses, tapi untuk menjaga agar hidupmu <strong style="color:var(--gold);font-weight:700;">tetap di jalur</strong> yang searah dengan jalan menuju sukses.
+        Silent Enforcer tidak menjanjikan sukses.<br>
+        Ia menjaga agar hidupmu <strong style="color:var(--gold);font-weight:700;">tetap di jalur</strong><br>
+        yang mengarah ke sana.
       </h2>
     </div>
     <p class="tujuan-sub reveal delay-2">
-      Konsistensi bukan tentang semangat. Konsistensi adalah sistem. Dan sistem butuh dijaga pada tiga titik yang berbeda.
-      Silent Enforcer bekerja di ketiga titik itu.
+      Konsistensi bukan soal semangat. Konsistensi adalah sistem.<br>
+      Dan sistem butuh dijaga di tiga titik berbeda.<br>
+      Silent Enforcer bekerja di ketiganya.
     </p>
   </div>
 
@@ -1898,7 +2053,7 @@
   </div>
   <div class="stat-item reveal delay-3">
     <div class="stat-num">∞</div>
-    <div class="stat-label">Companion — Tanpa Batas Waktu</div>
+    <div class="stat-label">Companion Tanpa Batas Waktu</div>
   </div>
 </div>
 
@@ -1910,8 +2065,8 @@
   <h2 class="big-h2 reveal delay-1">
     Masalahnya bukan<br>
     kamu tidak tahu.<br>
-    Masalahnya <em>tidak ada<br>
-    jejak nyata.</em>
+    Masalahnya: <em>kamu<br>
+    terus menghilang.</em>
   </h2>
   <div class="split-layout">
     <div class="split-side reveal-left">
@@ -1958,23 +2113,33 @@
     <p class="price-desc">
       Ini bukan biaya AI. Bukan biaya server.<br>
       <span class="price-pull-quote">"Manusia menjaga sesuatu lebih serius<br>ketika ada yang dipertaruhkan."</span>
-      Jika semuanya gratis, menghilang terasa tidak punya konsekuensi.<br><br>
-      Sebagian besar hidup gagal bukan karena momen kegagalan besar, tapi karena terlalu mudah meninggalkan hal kecil yang penting.
+      Jika menghilang tidak punya konsekuensi, menghilang terasa mudah.<br><br>
+      Sebagian besar hidup gagal bukan karena satu momen besar,<br>tapi karena terlalu mudah meninggalkan hal kecil yang penting, hari demi hari.
     </p>
     <div class="price-line"></div>
     <div class="no-refund">Tidak Ada Refund. Tanpa Pengecualian.</div>
   </div>
 </section>
 
-<!-- QUOTE -->
-<section class="quote-section">
-  <div class="quote-bg"></div>
-  <p class="quote-text reveal">
-    "Hidup berubah bukan saat kamu menyadari,<br>
-    Tapi saat <em style="font-weight:700;">rutinitas bernilai tetap berjalan</em><br>
-    meski emosi berubah."
-  </p>
-  <div class="quote-attr reveal delay-2">Wisdom Insight</div>
+<!-- KONSEKUENSI KEHADIRAN -->
+<section class="big-section">
+  <div class="section-label reveal">Apa yang Mulai Berubah</div>
+  <h2 class="big-h2 reveal delay-1">
+    Bukan hidupmu<br>
+    yang berubah instan.<br>
+    Tapi <em>jejakmu<br>mulai berbeda.</em>
+  </h2>
+  <div style="margin-top:3.5rem;max-width:680px;">
+    <p class="reveal delay-2" style="color:var(--gray-light);font-size:1.2rem;line-height:1.65;font-weight:300;">
+      Hari-harimu tidak lagi sepenuhnya hilang tanpa catatan.<br>
+      Restart terlihat lebih cepat. Kebocoran tidak lagi invisible.<br>
+      Ritme mulai tetap ada meski emosi berubah.
+    </p>
+    <p class="reveal delay-3" style="color:var(--gray-light);font-size:1.2rem;line-height:1.65;font-weight:300;margin-top:1.5rem;">
+      Sedikit demi sedikit, satu bukti terbentuk:<br>
+      <em style="color:var(--gold);font-weight:700;font-style:italic;">kamu tidak lagi sepenuhnya menghilang dari hidupmu sendiri.</em>
+    </p>
+  </div>
 </section>
 
 <div class="gold-line"></div>
@@ -1990,32 +2155,32 @@
     <div class="origin-item reveal">
       <div class="origin-icon">▸ 01</div>
       <div class="origin-title">Konsistensi Bertahun-tahun</div>
-      <p class="origin-desc">Pengalaman menjaga rutinitas dan disiplin pribadi dalam jangka panjang.</p>
+      <p class="origin-desc">Dibangun dari pengalaman menjaga rutinitas dan disiplin pribadi dalam jangka panjang, bukan teori.</p>
     </div>
     <div class="origin-item reveal delay-1">
       <div class="origin-icon">▸ 02</div>
       <div class="origin-title">Psikologi &amp; Filosofi</div>
-      <p class="origin-desc">Studi mendalam tentang perilaku manusia, habit formation, dan behavioral enforcement.</p>
+      <p class="origin-desc">Studi mendalam tentang perilaku manusia, habit formation, dan mekanisme behavioral enforcement.</p>
     </div>
     <div class="origin-item reveal delay-2">
       <div class="origin-icon">▸ 03</div>
       <div class="origin-title">Membangun @wisdom.insight_</div>
-      <p class="origin-desc">Proses organik membangun komunitas yang terkoneksi dengan nilai disiplin nyata.</p>
+      <p class="origin-desc">Proses organik membangun komunitas yang berakar pada nilai disiplin nyata, bukan motivasi semu.</p>
     </div>
     <div class="origin-item reveal">
       <div class="origin-icon">▸ 04</div>
       <div class="origin-title">Sistem AI Kolaboratif</div>
-      <p class="origin-desc">Dibangun dan terus dikembangkan bersama berbagai model AI untuk efektivitas maksimal.</p>
+      <p class="origin-desc">Dikembangkan bersama berbagai model AI untuk merancang sistem yang responsif terhadap pola perilaku nyata.</p>
     </div>
     <div class="origin-item reveal delay-1">
       <div class="origin-icon">▸ 05</div>
       <div class="origin-title">Data Perilaku Nyata</div>
-      <p class="origin-desc">Setiap iterasi sistem lahir dari pola behavioral yang terekam dari interaksi lapangan.</p>
+      <p class="origin-desc">Setiap iterasi lahir dari pola behavioral yang terekam dari interaksi lapangan, bukan asumsi.</p>
     </div>
     <div class="origin-item reveal delay-2">
       <div class="origin-icon">▸ 06</div>
       <div class="origin-title">Spiritualitas &amp; Makna</div>
-      <p class="origin-desc">Waktu dipahami sebagai amanah. Setiap detik memiliki nilai yang tidak bisa dikembalikan.</p>
+      <p class="origin-desc">Waktu dipahami sebagai amanah. Setiap hari yang berlalu tanpa jejak adalah kehilangan yang nyata.</p>
     </div>
   </div>
 </section>
@@ -2078,7 +2243,8 @@
       Hasil lahir dari kualitas yang terakumulasi.
       Keberhasilan adalah konsekuensi dari rantai itu.<br><br>
       <span style="color:#ffffff;font-style:normal;">Silent Enforcer tidak menjanjikan keberhasilan.</span>
-      Ia menjaga titik pertama dari rantai ini, agar hidupmu <em style="color:var(--gold);font-style:italic;font-weight:700;">tetap di jalur yang searah dengan jalan menuju ke sana.</em>
+      Ia menjaga titik pertama dari rantai ini:
+      <em style="color:var(--gold);font-style:italic;font-weight:700;">agar kamu tidak berhenti sebelum rantai itu sempat terbentuk.</em>
     </p>
   </div>
 </section>
@@ -2117,7 +2283,7 @@
 <section class="covenant-section">
   <div class="covenant-inner">
     <h2 class="covenant-heading reveal">MASIH ADA PERTANYAAN?</h2>
-    <p class="covenant-sub reveal delay-2">Pahami sistem lebih dalam.</p>
+    <p class="covenant-sub reveal delay-2">Pelajari aturan, struktur, dan konsekuensi sistem lebih dalam.</p>
     <div class="reveal delay-3">
       <a href="covenant-manual.html" class="btn-primary">The Covenant Manual</a>
     </div>
