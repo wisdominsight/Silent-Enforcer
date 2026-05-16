@@ -2251,12 +2251,9 @@
 
   function runPolaLoop() {
     if (!polaChain) return;
-    polaChain.classList.add('fading');
-    setTimeout(function() {
-      polaChain.classList.remove('visible', 'fading');
-      void polaChain.offsetWidth;
-      polaChain.classList.add('visible');
-    }, POLA_FADE_MS + POLA_PAUSE_MS);
+    polaChain.classList.remove('visible');
+    void polaChain.offsetWidth;
+    polaChain.classList.add('visible');
   }
 
   var polaObserver = new IntersectionObserver(function(entries) {
