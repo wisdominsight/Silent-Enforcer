@@ -794,6 +794,115 @@ body::before {
   .closing-quote { font-size: 1.4rem; }
 }
 
+
+/* ═══════════════════════════════════════════════
+   MEDIUM-STYLE TYPOGRAPHY SYSTEM
+   Body  : Charter → Georgia → serif | 20px / 1.58
+   Color : rgba(255,255,255,0.84) — bukan pure white
+   Kept  : Cormorant untuk heading dramatis & blockquote
+           Space Mono untuk label, meta, terminal
+═══════════════════════════════════════════════ */
+
+:root {
+  --font-body-serif: 'Charter', 'Bitstream Charter', Georgia, Cambria, 'Times New Roman', serif;
+  --font-heading-sans: 'Söhne', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  --text-body-color: rgba(255, 255, 255, 0.84);
+  --text-body-size: 1.2rem;
+  --text-body-lh: 1.58;
+}
+
+/* ── PARAGRAF UTAMA ── */
+.doc-body p {
+  font-family: var(--font-body-serif) !important;
+  font-size: var(--text-body-size) !important;
+  line-height: var(--text-body-lh) !important;
+  color: var(--text-body-color) !important;
+  font-weight: 400 !important;
+  letter-spacing: 0.01em;
+  margin-bottom: 1.6rem !important;
+}
+
+/* ── LIST ITEMS ── */
+.doc-list li,
+.doc-steps li {
+  font-family: var(--font-body-serif) !important;
+  font-size: 1.1rem !important;
+  line-height: 1.65 !important;
+  color: var(--text-body-color) !important;
+  font-weight: 400 !important;
+  letter-spacing: 0.01em;
+}
+
+/* ── RULE BOX PARAGRAPHS ── */
+.doc-rule-box p {
+  font-family: var(--font-body-serif) !important;
+  font-size: 1.1rem !important;
+  line-height: 1.65 !important;
+  color: var(--text-body-color) !important;
+  font-weight: 400 !important;
+}
+
+/* ── COMPARE COL LISTS (jika ada text langsung) ── */
+.doc-compare-col p,
+.doc-compare-col li {
+  font-family: var(--font-body-serif) !important;
+  font-size: 1.05rem !important;
+  line-height: 1.6 !important;
+  color: var(--text-body-color) !important;
+  font-weight: 400 !important;
+}
+
+/* ── DOCUMENT SUBTITLE (header intro) ── */
+.doc-subtitle {
+  font-family: var(--font-body-serif) !important;
+  font-size: 1.15rem !important;
+  line-height: 1.7 !important;
+  color: var(--text-body-color) !important;
+  font-weight: 400 !important;
+  font-style: italic !important;
+}
+
+/* ── CLOSING SECTION TEXT ── */
+.closing-final {
+  font-family: var(--font-body-serif) !important;
+  font-size: 1.1rem !important;
+  line-height: 1.75 !important;
+  color: var(--text-body-color) !important;
+}
+
+/* ── CTA SUB ── */
+.doc-cta-sub {
+  font-family: var(--font-body-serif) !important;
+  font-size: 1.1rem !important;
+  line-height: 1.7 !important;
+  color: var(--text-body-color) !important;
+  font-weight: 400 !important;
+}
+
+/* ── SECTION HEADING — Söhne stack, tapi pertahankan size ── */
+.section-heading {
+  font-family: 'Cormorant Garamond', serif !important;
+}
+
+/* ── BLOCKQUOTE — tetap Cormorant, ini pull quote ── */
+.doc-blockquote {
+  font-family: 'Cormorant Garamond', serif !important;
+}
+
+/* ── MOBILE — turun ke ~18px ── */
+@media (max-width: 768px) {
+  :root {
+    --text-body-size: 1.08rem;
+    --text-body-lh: 1.6;
+  }
+  .doc-subtitle {
+    font-size: 1.05rem !important;
+  }
+  .doc-cta-sub {
+    font-size: 1rem !important;
+  }
+}
+
 </style>
 </head>
 <body>
