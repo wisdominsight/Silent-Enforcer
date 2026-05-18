@@ -806,7 +806,7 @@ body::before {
 :root {
   --font-body-serif: 'Charter', 'Bitstream Charter', Georgia, Cambria, 'Times New Roman', serif;
   --font-heading-sans: 'Söhne', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  --text-body-color: rgba(255, 255, 255, 0.84);
+  --text-body-color: rgba(255, 255, 255, 1);
   --text-body-size: 1.2rem;
   --text-body-lh: 1.58;
 }
@@ -889,7 +889,15 @@ body::before {
   font-family: 'Cormorant Garamond', serif !important;
 }
 
-/* ── MOBILE — turun ke ~18px ── */
+/* ── FAQ QUESTIONS — lebih besar ── */
+#s12 .doc-sub {
+  font-size: 1.1rem !important;
+  letter-spacing: 0.05em !important;
+  text-transform: none !important;
+  font-weight: 700 !important;
+}
+
+
 @media (max-width: 768px) {
   :root {
     --text-body-size: 1.08rem;
@@ -947,20 +955,20 @@ body::before {
     </div>
 
     <nav class="toc">
-      <a href="#s01" class="toc-item active"><span class="toc-num">§ 01</span><span class="toc-label">Produk ini apa?</span></a>
-      <a href="#s02" class="toc-item"><span class="toc-num">§ 02</span><span class="toc-label">Platform & cara kerja</span></a>
-      <a href="#s03" class="toc-item"><span class="toc-num">§ 03</span><span class="toc-label">Quest Aksi Minimum Harian</span></a>
-      <a href="#s04" class="toc-item"><span class="toc-num">§ 04</span><span class="toc-label">Fase Enforcement</span></a>
-      <a href="#s05" class="toc-item"><span class="toc-num">§ 05</span><span class="toc-label">Fase Companion</span></a>
-      <a href="#s06" class="toc-item"><span class="toc-num">§ 06</span><span class="toc-label">Evaluasi & konsekuensi</span></a>
-      <a href="#s07" class="toc-item"><span class="toc-num">§ 07</span><span class="toc-label">Yang pengguna dapatkan</span></a>
-      <a href="#s08" class="toc-item"><span class="toc-num">§ 08</span><span class="toc-label">Versus habit tracker</span></a>
-      <a href="#s09" class="toc-item"><span class="toc-num">§ 09</span><span class="toc-label">Mengapa 04:00 WIB?</span></a>
-      <a href="#s10" class="toc-item"><span class="toc-num">§ 10</span><span class="toc-label">Cocok untuk siapa?</span></a>
-      <a href="#s11" class="toc-item"><span class="toc-num">§ 11</span><span class="toc-label">Hukuman atau penjaga?</span></a>
-      <a href="#s12" class="toc-item"><span class="toc-num">§ 12</span><span class="toc-label">Contoh harian & tampilan</span></a>
-      <a href="#s13" class="toc-item"><span class="toc-num">§ 13</span><span class="toc-label">Bagaimana sistem mencatat</span></a>
-      <a href="#s14" class="toc-item"><span class="toc-num">§ 14</span><span class="toc-label">Inti</span></a>
+      <a href="#s01" class="toc-item active"><span class="toc-num">§ 01</span><span class="toc-label">Cara kerja harian</span></a>
+      <a href="#s02" class="toc-item"><span class="toc-num">§ 02</span><span class="toc-label">Perbedaan Penting Stall dan X</span></a>
+      <a href="#s03" class="toc-item"><span class="toc-num">§ 03</span><span class="toc-label">Simulasi 7 hari pertama</span></a>
+      <a href="#s04" class="toc-item"><span class="toc-num">§ 04</span><span class="toc-label">Quest Aksi Minimum Harian</span></a>
+      <a href="#s05" class="toc-item"><span class="toc-num">§ 05</span><span class="toc-label">Fase Enforcement</span></a>
+      <a href="#s06" class="toc-item"><span class="toc-num">§ 06</span><span class="toc-label">Fase Companion</span></a>
+      <a href="#s07" class="toc-item"><span class="toc-num">§ 07</span><span class="toc-label">Fase Sovereign</span></a>
+      <a href="#s08" class="toc-item"><span class="toc-num">§ 08</span><span class="toc-label">Evaluasi & konsekuensi</span></a>
+      <a href="#s09" class="toc-item"><span class="toc-num">§ 09</span><span class="toc-label">Yang pengguna dapatkan</span></a>
+      <a href="#s10" class="toc-item"><span class="toc-num">§ 10</span><span class="toc-label">Kenapa sistem ini berbeda</span></a>
+      <a href="#s11" class="toc-item"><span class="toc-num">§ 11</span><span class="toc-label">Mengapa 04:00 WIB?</span></a>
+      <a href="#s12" class="toc-item"><span class="toc-num">§ 12</span><span class="toc-label">Pertanyaan yang sering muncul</span></a>
+      <a href="#s13" class="toc-item"><span class="toc-num">§ 13</span><span class="toc-label">Cocok untuk siapa?</span></a>
+      <a href="#s14" class="toc-item"><span class="toc-num">§ 14</span><span class="toc-label">Inti sistem</span></a>
     </nav>
 
     <div class="sidebar-footer">
@@ -976,77 +984,21 @@ body::before {
       <header class="doc-header">
         <div class="doc-eyebrow">Silent Enforcer · Dokumen Resmi</div>
         <h1 class="doc-title">The Covenant<br><em>Manual</em></h1>
-        <p class="doc-subtitle">Semua yang perlu diketahui sebelum masuk.</p>
+        <p class="doc-subtitle">Semua yang perlu kamu pahami sebelum masuk.</p>
       </header>
 
+
       <!-- ══════════════════════════
-           § 01 PRODUK INI APA
+           § 01 CARA KERJA HARIAN
       ══════════════════════════ -->
       <section class="doc-section" id="s01">
         <div class="section-num">§ 01</div>
-        <h2 class="section-heading">Ini sebenarnya produk apa?</h2>
-
-        <div class="doc-body">
-          <p>Silent Enforcer adalah <span class="doc-strong">sistem akuntabilitas perilaku</span>.</p>
-          <p>Bukan AI biasa. Bukan aplikasi habit tracker. Bukan komunitas motivasi. Bukan coach produktivitas.</p>
-          <p>Sistem ini dirancang untuk menjaga satu hal:</p>
-        </div>
-
-        <blockquote class="doc-blockquote">
-          agar seseorang tidak terus-menerus menghilang dari hal yang sudah dia bilang penting.
-        </blockquote>
-
-        <div class="doc-body">
-          <p>Fokus utama sistem bukan membuat orang "termotivasi", tapi <strong style="color:var(--gold);">menjaga rutinitas bernilai tetap berjalan saat emosi berubah.</strong></p>
-          <p>Karena hidup jarang runtuh karena satu kegagalan besar. Hidup biasanya runtuh karena:</p>
-        </div>
-
-        <ul class="doc-list">
-          <li>terlalu banyak menunda,</li>
-          <li>terlalu sering restart,</li>
-          <li>terlalu mudah menghilang,</li>
-          <li>dan terlalu lama hidup tanpa jejak nyata.</li>
-        </ul>
-
-        <div class="doc-body">
-          <p>Produk ini dibangun melalui pengalaman, proses analisa, dan evaluasi panjang dari banyak sudut pandang: psikologi perilaku, pola avoidance manusia, loss aversion, mekanisme akuntabilitas, dan desain konsekuensi.</p>
-          <p>Setiap aturan, setiap batas waktu, setiap konsekuensi, dan setiap teks dalam sistem punya alasan psikologis yang disengaja.</p>
-          <p>Karena masalah utama kebanyakan orang sebenarnya bukan <em>"tidak tahu harus apa"</em>. Masalah utamanya:</p>
-        </div>
-
-        <blockquote class="doc-blockquote">
-          mereka menghilang saat harus melakukannya.
-        </blockquote>
-
-        <div class="doc-body">
-          <p>Sistem ini dibangun untuk menyerang titik itu. Bukan dengan motivasi tapi dengan struktur, konsekuensi, dan sistem yang tetap berjalan meski mood berubah.</p>
-        </div>
-      </section>
-
-      <!-- ══════════════════════════
-           § 02 PLATFORM & CARA KERJA
-      ══════════════════════════ -->
-      <section class="doc-section" id="s02">
-        <div class="section-num">§ 02</div>
-        <h2 class="section-heading">Platform dan cara kerja harian</h2>
+        <h2 class="section-heading">Cara kerja harian</h2>
 
         <div class="doc-body">
           <p>Platform utama sistem adalah <span class="doc-strong">Telegram Bot</span>.</p>
-          <p>Setelah pembayaran diverifikasi via <span class="doc-gold">WA</span> atau <span class="doc-gold">EMAIL</span>, pengguna akan menerima link akses Telegram.</p>
-        </div>
-
-        <div class="doc-body"><p>Setelah masuk, pengguna menjalani onboarding:</p></div>
-
-        <ol class="doc-steps">
-          <li>Menjalani onboarding</li>
-          <li>Menulis Visi</li>
-          <li>Menentukan Quest harian</li>
-          <li>Mengunci kontrak</li>
-          <li>Sistem mulai aktif</li>
-        </ol>
-
-        <div class="doc-body">
-          <p>Setelah itu, interaksi hariannya sangat sederhana. Setiap hari sebelum pukul <span class="doc-gold">04:00 WIB</span>, pengguna wajib mengirim satu kata:</p>
+          <p>Setelah pembayaran diverifikasi, kamu menerima link akses. Lalu menjalani onboarding singkat: tulis Visi, tentukan Quest harian, dan kunci kontrak.</p>
+          <p>Setelah itu, interaksi hariannya sangat sederhana. Setiap hari sebelum <span class="doc-gold">04:00 WIB</span>, kirim satu kata:</p>
         </div>
 
         <div class="doc-terminal">
@@ -1065,122 +1017,151 @@ body::before {
         </div>
 
         <div class="doc-body">
-          <p>Tidak ada menu rumit. Tidak ada dashboard penuh fitur. Tidak ada chat panjang. Tidak ada motivasi harian. Hanya satu keputusan kecil setiap hari.</p>
-          <p>Namun justru dari titik kecil itu, arah hidup seseorang mulai berubah.</p>
+          <p>Tidak ada menu rumit. Tidak ada dashboard penuh grafik. Hanya satu keputusan kecil setiap hari: hadir, atau menghilang.</p>
         </div>
       </section>
 
       <!-- ══════════════════════════
-           § 03 QUEST
+           § 02 STALL ≠ X
+      ══════════════════════════ -->
+      <section class="doc-section" id="s02">
+        <div class="section-num">§ 02</div>
+        <h2 class="section-heading">Perbedaan Penting Stall dan X</h2>
+
+        <div class="doc-body">
+          <p>Ini bukan sekadar fitur teknis. Ini <span class="doc-strong">worldview sistem</span>.</p>
+          <p>Silent Enforcer membedakan dua kondisi yang sepenuhnya berbeda:</p>
+        </div>
+
+        <div class="doc-compare">
+          <div class="doc-compare-col">
+            <div class="doc-compare-label companion" style="color:#E87A3A;font-size:1.6rem;letter-spacing:0.05em;">Stall</div>
+            <div class="doc-body"><p style="color:#FFFFFF;font-size:0.95rem;">Hadir. Gagal. Jujur melaporkan kegagalan. Sistem <em>menghargai</em> kehadiran ini. Karena kamu tidak menghilang, kamu hanya jatuh hari ini.</p></div>
+          </div>
+          <div class="doc-compare-col">
+            <div class="doc-compare-label enforcement" style="font-size:2.4rem;letter-spacing:0.05em;">X</div>
+            <div class="doc-body"><p style="color:#FFFFFF;font-size:0.95rem;">Menghilang total. Tidak ada laporan apapun. Sistem paling keras terhadap kondisi ini. Tiga hari berturut, kontrak mati.</p></div>
+          </div>
+        </div>
+
+        <blockquote class="doc-blockquote">
+          Gagal masih bisa dicatat. Menghilang merusak semuanya.
+        </blockquote>
+
+        <div class="doc-body">
+          <p>Sistem tidak menghukum kegagalan. Sistem menghukum <span class="doc-strong">penghindaran</span>.</p>
+          <p>Karena yang menghancurkan bukan kegagalannya, tapi pola kabur setelah gagal. Itulah yang selalu membuat kamu restart dari nol.</p>
+        </div>
+      </section>
+
+      <!-- ══════════════════════════
+           § 03 SIMULASI 7 HARI
       ══════════════════════════ -->
       <section class="doc-section" id="s03">
         <div class="section-num">§ 03</div>
+        <h2 class="section-heading">Simulasi 7 hari pertama</h2>
+
+        <div class="doc-body">
+          <p>Quest contoh: <span class="doc-gold">"Pushup 10x"</span></p>
+        </div>
+
+        <div class="doc-terminal">
+          <div class="doc-terminal-header">
+            <div class="t-dot"></div><div class="t-dot"></div><div class="t-dot"></div>
+            <span class="doc-terminal-title">simulasi · 7 hari pertama</span>
+          </div>
+          <div class="doc-terminal-body">
+            <div class="t-line"><span class="t-prompt">$</span><span class="t-gray">Hari 1</span><span class="t-prompt"> ›</span><span class="t-jalan"> jalan</span><span class="t-comment"> &nbsp;✔ Quest selesai.</span></div>
+            <div class="t-line"><span class="t-prompt">$</span><span class="t-gray">Hari 2</span><span class="t-prompt"> ›</span><span class="t-jalan"> jalan</span><span class="t-comment"> &nbsp;✔ Streak: 2.</span></div>
+            <div class="t-line"><span class="t-prompt">$</span><span class="t-gray">Hari 3</span><span class="t-prompt"> ›</span><span class="t-stall"> stall</span><span class="t-comment"> &nbsp;✔ Tercatat. Kejujuran dihitung. Besok tetap lapor.</span></div>
+            <div class="t-line"><span class="t-prompt">$</span><span class="t-gray">Hari 4</span><span class="t-prompt"> ›</span><span class="t-jalan"> jalan</span><span class="t-comment"> &nbsp;✔ Kembali jalan.</span></div>
+            <div class="t-line"><span class="t-prompt">$</span><span class="t-gray">Hari 5</span><span class="t-prompt"> ›</span><span class="t-gray"> [tidak ada input]</span></div>
+            <div class="t-line"><span class="t-prompt">!</span><span class="t-x">Hari 5: X. Severity: 1/3. Ketik "saya menyerah kemarin" untuk kembali.</span></div>
+            <div class="t-line"><span class="t-prompt">$</span><span class="t-gray">Hari 6</span><span class="t-prompt"> ›</span><span class="t-gold"> saya menyerah kemarin</span><span class="t-comment"> &nbsp;✔ Kembali jalan. Severity: 0.</span></div>
+            <div class="t-line"><span class="t-prompt">$</span><span class="t-gray">Hari 7</span><span class="t-prompt"> ›</span><span class="t-jalan"> jalan</span><span class="t-comment"> &nbsp;✔ Tercatat.<span class="t-cursor"></span></span></div>
+          </div>
+        </div>
+
+        <div class="doc-body">
+          <p><span class="doc-strong">Yang perlu diperhatikan:</span></p>
+        </div>
+
+        <ul class="doc-list">
+          <li>Stall (hari 3) dicatat dan dihargai, karena kamu hadir meski gagal.</li>
+          <li>X (hari 5) memicu severity. Bukan karena kamu gagal, tapi karena kamu menghilang.</li>
+          <li>Kamu bisa pulih dari 1 ghosting dengan satu kalimat sebelum hari ke-3.</li>
+          <li>Ghosting 3 hari berturut tanpa input apapun = kontrak mati permanen.</li>
+        </ul>
+      </section>
+
+      <!-- ══════════════════════════
+           § 04 QUEST
+      ══════════════════════════ -->
+      <section class="doc-section" id="s04">
+        <div class="section-num">§ 04</div>
         <h2 class="section-heading">Quest Aksi Minimum Harian</h2>
 
         <div class="doc-body">
-          <p>Quest adalah <span class="doc-strong">Aksi Minimum Harian</span>. Bukan target besar. Bukan hasil akhir. Bukan "ubah hidup dalam 30 hari".</p>
-          <p>Quest adalah tindakan kecil yang tetap bisa dilakukan bahkan saat mood buruk, malas, sibuk, atau overthinking. Contoh:</p>
+          <p>Quest adalah <span class="doc-strong">Aksi Minimum Harian</span>, tindakan kecil yang tetap bisa dilakukan bahkan saat mood buruk, malas, atau overthinking. Contoh:</p>
         </div>
 
         <ul class="doc-list">
           <li>Pushup 10x</li>
           <li>Baca 1 halaman</li>
           <li>Tulis 1 paragraf</li>
+          <li>Transfer 1 rupiah ke tabungan</li>
           <li>Tidak buka media sosial 1 jam</li>
-          <li>Catat 1 pengeluaran</li>
+          <li>Kirim 1 pesan DM penawaran</li>
         </ul>
 
         <div class="doc-body">
-          <p>Tujuan Quest sengaja dibuat kecil di awal sebagai proses adaptasi. Karena hampir semua hal besar selalu dimulai dari benih kecil yang terus dijaga. Dari titik kecil itulah sistem menjaga kehadiran, kontinuitas, lalu perlahan meningkatkan kualitas konsistensi.</p>
-        </div>
-
-        <blockquote class="doc-blockquote">
-          menjaga rantai kehadiran.
-        </blockquote>
-
-        <div class="doc-sub">Siapa yang menentukan Quest?</div>
-
-        <div class="doc-body">
-          <p>Pengguna sendiri. Sistem tidak menentukan hidup pengguna, tidak menentukan apa yang penting, tidak menentukan goal mana yang benar.</p>
-          <p>Namun ada aturan ketat. Quest harus:</p>
-        </div>
-
-        <ul class="doc-list">
-          <li>jelas dan konkret,</li>
-          <li>ada angka,</li>
-          <li>hasilnya YA / TIDAK,</li>
-          <li>dan cukup kecil untuk dikerjakan secara realistis.</li>
-        </ul>
-
-        <div class="doc-rule-box">
-          <div class="doc-rule-box-label">Aturan Kunci</div>
-          <p>Setelah Quest dikunci tidak ada negosiasi selama 30 hari.</p>
-        </div>
-
-        <div class="doc-sub">Apakah goal tiap orang bisa berbeda?</div>
-
-        <div class="doc-body">
-          <p>Ya. Setiap orang bisa punya visi berbeda, bidang hidup berbeda, tujuan berbeda, dan Quest berbeda. Sistem tidak peduli bidangnya olahraga, belajar, finansial, kreativitas, spiritualitas.</p>
-          <p>Yang dinilai hanya satu hal:</p>
+          <p>Kamu yang menentukan Quest-mu. Sistem tidak peduli bidangnya olahraga, belajar, finansial, atau kreativitas. Yang dinilai hanya satu:</p>
         </div>
 
         <blockquote class="doc-blockquote">
           apakah kamu hadir terhadap kontrak kecil yang kamu buat sendiri.
         </blockquote>
+
+        <div class="doc-rule-box">
+          <div class="doc-rule-box-label">Aturan Kunci</div>
+          <p>Setelah Quest dikunci, tidak ada negosiasi selama 30 hari. Quest harus: konkret, ada angka, hasilnya YA/TIDAK.</p>
+        </div>
       </section>
 
       <!-- ══════════════════════════
-           § 04 FASE ENFORCEMENT
+           § 05 FASE ENFORCEMENT
       ══════════════════════════ -->
-      <section class="doc-section" id="s04">
-        <div class="section-num">§ 04</div>
-        <h2 class="section-heading">Fase Enforcement 30 hari pembentukan</h2>
+      <section class="doc-section" id="s05">
+        <div class="section-num">§ 05</div>
+        <h2 class="section-heading">Fase Enforcement, 30 hari pembentukan</h2>
 
         <div class="doc-body">
-          <p>Enforcement adalah <span class="doc-strong">fase 30 hari pertama</span>. Fase pembentukan fondasi. Di sini sistem berjalan paling ketat.</p>
+          <p>Fase pertama. Sistem berjalan paling ketat. Fondasi dibangun di sini.</p>
         </div>
 
         <ul class="doc-list">
-          <li>Keras terhadap ghosting</li>
-          <li>Penuh konsekuensi nyata</li>
+          <li>Keras terhadap ghosting (X)</li>
+          <li>Konsekuensi nyata dan instan</li>
           <li>Tidak ada toleransi menghilang tanpa kabar</li>
         </ul>
 
         <div class="doc-rule-box">
           <div class="doc-rule-box-label">Konsekuensi Kritis</div>
-          <p>Jika pengguna hilang <span style="color:var(--cream);font-weight:500;">3 hari berturut-turut</span> tanpa laporan apapun kontrak mati.</p>
+          <p>Ghosting <span style="color:var(--cream);font-weight:500;">3 hari berturut-turut</span> tanpa laporan apapun = kontrak mati permanen.</p>
         </div>
-
-        <div class="doc-body">
-          <p>Fase ini bertujuan membangun fondasi kehadiran. Bukan kehadiran saat semangat tapi kehadiran saat alasan untuk berhenti tersedia. Itu yang membedakan rutinitas nyata dengan niat baik.</p>
-        </div>
-
-        <blockquote class="doc-blockquote">
-          Sistem ini membedakan <strong style="color:var(--gold);">Stall</strong> dari <strong style="color:#CC4444;">X</strong>.<br>
-          <strong style="color:var(--gold);">Stall</strong> = hadir tapi gagal. <strong style="color:#CC4444;">X</strong> = menghilang total.<br>
-          Sistem jauh lebih keras terhadap menghilang.
-        </blockquote>
       </section>
 
       <!-- ══════════════════════════
-           § 05 FASE COMPANION
+           § 06 FASE COMPANION
       ══════════════════════════ -->
-      <section class="doc-section" id="s05">
-        <div class="section-num">§ 05</div>
-        <h2 class="section-heading">Fase Companion setelah lulus</h2>
+      <section class="doc-section" id="s06">
+        <div class="section-num">§ 06</div>
+        <h2 class="section-heading">Fase Companion, cermin jangka panjang</h2>
 
         <div class="doc-body">
-          <p>Companion adalah fase setelah lulus 30 hari. Untuk masuk, pengguna harus mencapai minimal:</p>
-        </div>
-
-        <div class="doc-rule-box">
-          <div class="doc-rule-box-label">Syarat Masuk Companion</div>
-          <p>≥ 60% Jalan selama 30 hari Enforcement.</p>
-        </div>
-
-        <div class="doc-body">
-          <p>Jika lulus: kontrak tidak mati, akses tetap aktif, pengguna masuk fase pendampingan jangka panjang. Companion bukan "mode santai" laporan harian tetap berjalan, mirror tetap ada.</p>
-          <p>Yang berubah adalah <span class="doc-strong">sifat tekanannya</span>.</p>
+          <p>Fase setelah lulus 30 hari. Syarat masuk rasio Jalan ≥ 60% selama Enforcement.</p>
+          <p>Ini bukan reward berupa "sistem lebih santai." Laporan harian tetap berjalan. Evalauasi berjalan. Pertumbuhan adalah tujuan.</p>
+          <p>Yang berubah adalah sifat tekanannya:</p>
         </div>
 
         <div class="doc-compare">
@@ -1188,32 +1169,52 @@ body::before {
             <div class="doc-compare-label enforcement">Enforcement</div>
             <ul class="doc-list">
               <li>Ketat, keras terhadap ghosting</li>
-              <li>Konsekuensi berat &amp; instan</li>
-              <li>Fokus: membangun fondasi</li>
               <li>Ghost 3 hari → kontrak mati</li>
+              <li>Fokus: bangun fondasi</li>
             </ul>
           </div>
           <div class="doc-compare-col">
             <div class="doc-compare-label companion">Companion</div>
             <ul class="doc-list">
-              <li>Sistem lebih stabil</li>
               <li>Tekanan survival diturunkan</li>
-              <li>Fokus: cermin jangka panjang</li>
+              <li>Fokus pertumbuhan jangka panjang</li>
               <li>Kehadiran tetap dipantau</li>
             </ul>
           </div>
         </div>
 
+        <blockquote class="doc-blockquote">
+          Bukan "tantangan 30 hari." Ini sistem yang tetap berjalan selama kamu hadir.
+        </blockquote>
+      </section>
+
+      <!-- ══════════════════════════
+           § 07 FASE SOVEREIGN
+      ══════════════════════════ -->
+      <section class="doc-section" id="s07">
+        <div class="section-num">§ 07</div>
+        <h2 class="section-heading">Fase Sovereign, berdaulat atas waktumu</h2>
+
         <div class="doc-body">
-          <p>Companion berfungsi sebagai cermin perilaku jangka panjang, penjaga kontinuitas, dan sistem yang membantu pengguna tetap berada di jalur yang searah dengan tujuan hidupnya. Bukan dengan ceramah tapi dengan data perilaku nyata yang terus tercatat.</p>
+          <p>Sistem ini dibuat agar suatu hari kamu <span class="doc-strong">tidak lagi membutuhkannya.</span></p>
+          <p>Setelah melewati Companion dalam waktu yang cukup panjang, dengan catatan yang konsisten, ada satu titik di mana kamu bisa keluar dari enforcement eksternal.</p>
+          <p>Bukan reset. Bukan berhenti. Berdaulat.</p>
+        </div>
+
+        <blockquote class="doc-blockquote">
+          Tujuan akhir sistem adalah membuat dirinya sendiri tidak relevan bagimu.
+        </blockquote>
+
+        <div class="doc-body">
+          <p>Ini yang membedakan Silent Enforcer dari aplikasi produktivitas biasa yang menciptakan ketergantungan selamanya. Di sini, ada exit yang bermartabat, dengan syarat yang harus dicapai.</p>
         </div>
       </section>
 
       <!-- ══════════════════════════
-           § 06 EVALUASI & KONSEKUENSI
+           § 08 EVALUASI & KONSEKUENSI
       ══════════════════════════ -->
-      <section class="doc-section" id="s06">
-        <div class="section-num">§ 06</div>
+      <section class="doc-section" id="s08">
+        <div class="section-num">§ 08</div>
         <h2 class="section-heading">Evaluasi hari ke-31 dan konsekuensi kegagalan</h2>
 
         <div class="doc-body">
@@ -1222,76 +1223,69 @@ body::before {
 
         <div class="doc-rule-box">
           <div class="doc-rule-box-label">Hasil Evaluasi</div>
-          <p><span class="doc-gold">Jika rasio Jalan ≥ 60%</span> → pengguna lulus dan masuk Companion.</p>
-          <p><span style="color:var(--gray);">Jika di bawah 60%</span> → pengguna memilih: mengulang atau menutup kontrak.</p>
-          <p><span style="color:#CC4444;">Jika terlalu sering gagal</span> → akses bisa ditutup permanen.</p>
+          <p><span class="doc-gold">Rasio Jalan ≥ 60%</span> → lulus, masuk Companion.</p>
+          <p><span style="color:var(--gray);">Di bawah 60%</span> → pilih: mengulang atau tutup kontrak.</p>
+          <p><span style="color:#CC4444;">Terlalu sering gagal berulang</span> → akses ditutup permanen.</p>
         </div>
 
-        <div class="doc-sub">Kalau gagal atau kena permanent close bisa masuk lagi?</div>
-
-        <div class="doc-body"><p>Tergantung jenis kegagalannya.</p></div>
-
         <ul class="doc-list">
-          <li><span class="doc-strong">Gagal karena ghosting</span> (hilang 3 hari tanpa laporan) masih bisa mendaftar lagi di batch berikutnya.</li>
-          <li><span class="doc-strong">Gagal karena stagnation berulang</span> (mengulang terus tapi standar tidak tercapai) akses bisa ditutup permanen.</li>
-          <li><span class="doc-strong">Alumni Companion yang kehilangan ritme</span> tersedia token pemulihan dan jalur recovery, namun semuanya terbatas.</li>
+          <li><span class="doc-strong">Ghosting (3x X)</span>, kontrak mati. Bisa daftar ulang di batch berikutnya.</li>
+          <li><span class="doc-strong">Stagnation berulang</span>, akses bisa ditutup permanen.</li>
+          <li><span class="doc-strong">Alumni Companion</span>, ada jalur pemulihan terbatas jika kehilangan ritme.</li>
         </ul>
 
-        <blockquote class="doc-blockquote">
-          konsekuensi harus nyata.
-        </blockquote>
+        <blockquote class="doc-blockquote">konsekuensi harus nyata.</blockquote>
       </section>
 
       <!-- ══════════════════════════
-           § 07 YANG PENGGUNA DAPATKAN
+           § 09 YANG PENGGUNA DAPATKAN
       ══════════════════════════ -->
-      <section class="doc-section" id="s07">
-        <div class="section-num">§ 07</div>
-        <h2 class="section-heading">Yang pengguna dapatkan secara nyata</h2>
+      <section class="doc-section" id="s09">
+        <div class="section-num">§ 09</div>
+        <h2 class="section-heading">Yang kamu dapatkan sebenarnya</h2>
 
         <div class="doc-body">
-          <p>Yang didapat pengguna bukan sekadar "fitur aplikasi". Yang sebenarnya dibeli pengguna adalah:</p>
+          <p>Bukan sekadar "fitur aplikasi." Yang sebenarnya dibeli:</p>
         </div>
 
         <blockquote class="doc-blockquote">
-          sistem eksternal yang tidak ikut berubah saat emosinya berubah.
+          sistem eksternal yang tidak ikut berubah saat emosimu berubah.
         </blockquote>
 
-        <div class="doc-body"><p>Yang didapat secara konkret:</p></div>
+        <div class="doc-body"><p>Secara konkret:</p></div>
 
         <ul class="doc-list">
           <li>Struktur akuntabilitas yang tidak bisa dinegosiasi</li>
           <li>Tekanan konsekuensi nyata</li>
           <li>Continuity tracking harian</li>
           <li>Mirror historis perilaku</li>
-          <li>Evaluasi perkembangan konsistensi dari siklus ke siklus</li>
-          <li>Laporan akhir siklus &amp; evaluasi kontinuitas</li>
-          <li>Streak faktual dan kontras perilaku dari waktu ke waktu</li>
+          <li>Evaluasi perkembangan dari siklus ke siklus</li>
+          <li>Laporan akhir siklus & evaluasi kontinuitas</li>
         </ul>
 
         <div class="doc-body"><p>Yang tidak ada:</p></div>
 
         <ul class="doc-list negative">
-          <li>Pujian</li>
-          <li>Validasi emosional</li>
-          <li>Manipulasi dopamine</li>
+          <li>Pujian atau validasi emosional</li>
+          <li>Manipulasi dopamin</li>
           <li>Kata-kata motivasi kosong</li>
+          <li>Empati yang membuatmu merasa aman untuk kabur</li>
         </ul>
 
         <blockquote class="doc-blockquote">
-          Yang diterima pengguna hanyalah pantulan faktual dari perilakunya sendiri.
+          Yang diterima hanyalah pantulan faktual dari perilakumu sendiri.
         </blockquote>
       </section>
 
       <!-- ══════════════════════════
-           § 08 VERSUS HABIT TRACKER
+           § 10 KENAPA BERBEDA
       ══════════════════════════ -->
-      <section class="doc-section" id="s08">
-        <div class="section-num">§ 08</div>
-        <h2 class="section-heading">Perbedaan dengan habit tracker biasa</h2>
+      <section class="doc-section" id="s10">
+        <div class="section-num">§ 10</div>
+        <h2 class="section-heading">Kenapa sistem ini berbeda dari habit tracker biasa</h2>
 
         <div class="doc-body">
-          <p>Habit tracker biasa fokus pada streak, grafik, badge, gamifikasi, reminder, dan visual progress. Kebanyakan bisa diabaikan tanpa konsekuensi.</p>
+          <p>Habit tracker biasa fokus pada streak, grafik, badge, gamifikasi, dan reminder. Kebanyakan bisa diabaikan tanpa konsekuensi.</p>
           <p>Silent Enforcer dibangun dari arah sebaliknya.</p>
         </div>
 
@@ -1300,53 +1294,38 @@ body::before {
             <div class="doc-compare-label enforcement" style="color:var(--gray);">Habit Tracker</div>
             <ul class="doc-list">
               <li>Badge, level, poin</li>
-              <li>Musik motivasi</li>
-              <li>Dashboard dopamine</li>
-              <li>Bisa diabaikan tanpa konsekuensi</li>
+              <li>Dashboard dopamin</li>
+              <li>Bisa diabaikan tanpa harga</li>
               <li>Membantu <em>merasa</em> produktif</li>
             </ul>
           </div>
           <div class="doc-compare-col">
             <div class="doc-compare-label companion">Silent Enforcer</div>
             <ul class="doc-list positive">
-              <li>Tidak ada badge atau reward</li>
-              <li>Tidak ada pujian</li>
-              <li>Konsekuensi nyata</li>
-              <li>Tidak bisa diabaikan tanpa harga</li>
+              <li>Tidak ada gamifikasi</li>
+              <li>Tidak ada manipulasi dopamin</li>
+              <li>Konsekuensi nyata jika menghilang</li>
               <li>Memastikan <em>tindakan</em> nyata terjadi</li>
             </ul>
           </div>
         </div>
 
         <blockquote class="doc-blockquote">
-          Manusia modern sudah terlalu banyak mengonsumsi motivasi, tapi terlalu sedikit membangun confrontation terhadap avoidance.
-        </blockquote>
-
-        <div class="doc-body">
-          <p>Habit tracker melacak kebiasaan. Silent Enforcer melacak satu hal saja:</p>
-        </div>
-
-        <blockquote class="doc-blockquote">
-          apakah seseorang hadir atau menghilang.
+          apakah seseorang hadir atau menghilang. Hanya itu yang dicatat.
         </blockquote>
       </section>
 
       <!-- ══════════════════════════
-           § 09 MENGAPA 04:00 WIB
+           § 11 MENGAPA 04:00 WIB
       ══════════════════════════ -->
-      <section class="doc-section" id="s09">
-        <div class="section-num">§ 09</div>
+      <section class="doc-section" id="s11">
+        <div class="section-num">§ 11</div>
         <h2 class="section-heading">Mengapa cutoff harus 04:00 WIB?</h2>
 
         <div class="doc-body">
-          <p>Karena sistem membutuhkan batas harian absolut, kalender perilaku yang jelas, dan titik evaluasi yang tidak bisa dinegosiasi.</p>
-          <p>04:00 WIB dipilih karena masih memberi ruang untuk orang yang tidur larut, tapi tetap memotong kebiasaan menunda.</p>
-          <p>Jika tidak ada batas keras, manusia cenderung berkata <em>"nanti saja"</em> dan kontrak mulai kehilangan makna.</p>
+          <p>Sistem membutuhkan batas harian absolut. 04:00 WIB dipilih karena masih memberi ruang untuk orang yang tidur larut, tapi menutup loophole prokrastinasi malam.</p>
+          <p>Jika tidak ada batas keras, manusia cenderung berkata <em>"nanti saja"</em>, dan kontrak mulai kehilangan daya paksa psikologisnya.</p>
         </div>
-
-        <blockquote class="doc-blockquote">
-          Sistem yang terlalu fleksibel akhirnya tidak punya daya paksa psikologis.
-        </blockquote>
 
         <div class="doc-terminal">
           <div class="doc-terminal-header">
@@ -1360,189 +1339,103 @@ body::before {
             <br>
             <div class="t-line"><span class="t-prompt">$</span><span class="t-gray">04:01 WIB</span></div>
             <div class="t-line"><span class="t-prompt">›</span><span class="t-gray">jalan</span></div>
-            <div class="t-line"><span class="t-prompt">!</span><span class="t-x">Cutoff terlewat. Hari ini: X.</span></div>
-            <div class="t-line"><span class="t-prompt">!</span><span class="t-x">Ghosting 1/3.<span class="t-cursor"></span></span></div>
+            <div class="t-line"><span class="t-prompt">!</span><span class="t-x">Cutoff terlewat. Hari ini: X. Ghosting 1/3.<span class="t-cursor"></span></span></div>
           </div>
         </div>
+
+        <blockquote class="doc-blockquote">
+          Sistem yang terlalu fleksibel akhirnya tidak punya daya paksa psikologis.
+        </blockquote>
       </section>
 
       <!-- ══════════════════════════
-           § 10 COCOK UNTUK SIAPA
+           § 12 FAQ — KETAKUTAN TERSEMBUNYI
       ══════════════════════════ -->
-      <section class="doc-section" id="s10">
-        <div class="section-num">§ 10</div>
+      <section class="doc-section" id="s12">
+        <div class="section-num">§ 12</div>
+        <h2 class="section-heading">Pertanyaan yang sering muncul</h2>
+
+        <div class="doc-sub">Kalau aku gagal, langsung dihukum keras?</div>
+        <div class="doc-body"><p>Tidak. Stall (gagal tapi hadir) tidak memicu konsekuensi berat. Yang dihukum adalah ghosting, menghilang tanpa laporan apapun. Kamu bisa Stall berulang kali selama kamu tetap melapor setiap hari.</p></div>
+
+        <div class="doc-sub">Apakah aku harus sempurna untuk lulus?</div>
+        <div class="doc-body"><p>Tidak. Syarat lulus hanya 60% hari dengan laporan "Jalan." Artinya kamu boleh Stall hampir separuh waktu, selama kamu tetap hadir dan jujur.</p></div>
+
+        <div class="doc-sub">Ini terasa seperti cult atau kontrol berlebihan.</div>
+        <div class="doc-body"><p>Sistemnya tidak menentukan hidupmu, tidak menentukan goal mana yang benar, dan tidak memberi nasihat. Ia hanya mencatat apakah kamu hadir terhadap kontrak yang kamu buat sendiri. Kamu yang menentukan semua isinya.</p></div>
+
+        <div class="doc-sub">Kalau aku malu karena sering Stall, bagaimana?</div>
+        <div class="doc-body"><p>Sistem ini tidak menilai niat dan tidak menghakimi. Bot tidak memberi respons emosional apapun. Tidak ada yang tahu kamu Stall selain dirimu sendiri dan catatanmu. Stall adalah data, bukan vonis moral.</p></div>
+
+        <div class="doc-sub">Apa yang terjadi kalau aku benar-benar butuh istirahat dari sistem?</div>
+        <div class="doc-body"><p>Tidak ada mode "jeda." Tapi ada jalur keluar yang bermartabat setelah melewati Companion dengan catatan yang cukup kuat. Sebelum itu, Stall adalah satu-satunya cara jujur untuk mengakui hari yang berat.</p></div>
+
+        <div class="doc-sub">Ini cocok untuk kondisi emosi yang tidak stabil?</div>
+        <div class="doc-body"><p>Tidak. Produk ini tidak cocok untuk orang yang membutuhkan dukungan emosional intens atau sedang dalam kondisi krisis. Bot tidak memberi empati dan tidak menggantikan bantuan profesional.</p></div>
+      </section>
+
+      <!-- ══════════════════════════
+           § 13 COCOK UNTUK SIAPA
+      ══════════════════════════ -->
+      <section class="doc-section" id="s13">
+        <div class="section-num">§ 13</div>
         <h2 class="section-heading">Sistem ini cocok untuk siapa?</h2>
 
         <div class="doc-body"><p>Paling cocok untuk:</p></div>
 
         <ul class="doc-list positive">
-          <li>Orang yang ingin mulai, mempertahankan, atau meningkatkan kualitas konsistensi</li>
           <li>Orang yang sudah tahu apa yang harus dilakukan, tapi terus kehilangan ritme</li>
-          <li>Orang yang sering restart hidup</li>
-          <li>Frustrated builder orang yang overthinking dan sadar dirinya sering menghindar</li>
-          <li>Orang yang butuh struktur eksternal yang tidak peduli mood</li>
+          <li>Orang yang sudah lelah restart dari nol dan butuh struktur eksternal yang tidak peduli mood</li>
+          <li>Orang yang sadar dirinya sering menghindar dan ingin sistem yang mengkonfrontasi itu</li>
+          <li>Orang yang ingin memulai, mempertahankan, atau meningkatkan kualitas tindakannya</li>
         </ul>
 
         <div class="doc-body"><p>Tidak cocok untuk:</p></div>
 
         <ul class="doc-list negative">
-          <li>Orang yang mencari motivasi emosional</li>
-          <li>Orang yang ingin aplikasi produktivitas santai</li>
-          <li>Orang yang suka banyak negosiasi</li>
-          <li>Orang yang membutuhkan support mental intens</li>
+          <li>Orang yang mencari motivasi emosional atau validasi</li>
+          <li>Orang yang ingin sistem yang bisa dinegosiasi saat malas datang</li>
+          <li>Orang yang membutuhkan dukungan mental intens</li>
+          <li>Orang yang berharap sistem ini memberi jawaban tentang "apa yang harus dilakukan"</li>
         </ul>
 
         <blockquote class="doc-blockquote">
-          Produk ini dibuat untuk orang yang sudah lelah restart hidup dari nol dan siap diperlakukan sebagai orang dewasa yang bertanggung jawab terhadap inputnya sendiri.
+          Untuk orang yang sudah lelah restart hidup dari nol dan siap diperlakukan sebagai orang dewasa yang bertanggung jawab terhadap inputnya sendiri.
         </blockquote>
       </section>
 
       <!-- ══════════════════════════
-           § 11 HUKUMAN ATAU PENJAGA
-      ══════════════════════════ -->
-      <section class="doc-section" id="s11">
-        <div class="section-num">§ 11</div>
-        <h2 class="section-heading">Sistem ini menghukum atau membantu tetap hadir?</h2>
-
-        <div class="doc-body">
-          <p>Keduanya. Namun caranya berbeda dari kebanyakan sistem.</p>
-          <p>Silent Enforcer membedakan dua kondisi yang sepenuhnya berbeda:</p>
-        </div>
-
-        <div class="doc-compare">
-          <div class="doc-compare-col">
-            <div class="doc-compare-label companion" style="color:#E87A3A;font-size:1.6rem;letter-spacing:0.05em;">Stall</div>
-            <div class="doc-body"><p style="color:#FFFFFF;font-size:0.95rem;">Hadir tapi gagal. Jujur melaporkan kegagalan. Sistem <em>menghargai</em> kehadiran ini karena kejujuran masih tercatat.</p></div>
-          </div>
-          <div class="doc-compare-col">
-            <div class="doc-compare-label enforcement" style="font-size:1.6rem;letter-spacing:0.05em;">X</div>
-            <div class="doc-body"><p style="color:#FFFFFF;font-size:0.95rem;">Menghilang total. Tidak ada laporan apapun. Sistem paling keras terhadap kondisi ini.</p></div>
-          </div>
-        </div>
-
-        <blockquote class="doc-blockquote">
-          gagal masih bisa dicatat. ketiadaan merusak semuanya.
-        </blockquote>
-
-        <div class="doc-body">
-          <p>Jadi sistem sebenarnya tidak menghukum kegagalan. Sistem menghukum <span class="doc-strong">penghindaran</span>.</p>
-          <p>Konsekuensi dibuat nyata supaya menghilang terasa lebih mahal daripada hadir. Karena manusia menjaga sesuatu lebih serius ketika ada yang dipertaruhkan.</p>
-        </div>
-      </section>
-
-      <!-- ══════════════════════════
-           § 12 CONTOH HARIAN & TAMPILAN
-      ══════════════════════════ -->
-      <section class="doc-section" id="s12">
-        <div class="section-num">§ 12</div>
-        <h2 class="section-heading">Contoh penggunaan harian dan tampilan produk</h2>
-
-        <div class="doc-body">
-          <p>Skenario: Quest pengguna adalah <span class="doc-gold">"Baca 1 halaman."</span></p>
-        </div>
-
-        <div class="doc-terminal">
-          <div class="doc-terminal-header">
-            <div class="t-dot"></div><div class="t-dot"></div><div class="t-dot"></div>
-            <span class="doc-terminal-title">skenario penggunaan harian</span>
-          </div>
-          <div class="doc-terminal-body">
-            <div class="t-line"><span class="t-comment">// Pengguna membaca hari ini</span></div>
-            <div class="t-line"><span class="t-prompt">›</span><span class="t-jalan">jalan</span></div>
-            <div class="t-line"><span class="t-prompt">$</span><span class="t-gold">✔ Quest selesai. Streak terjaga.</span></div>
-            <br>
-            <div class="t-line"><span class="t-comment">// Pengguna tidak membaca hari ini</span></div>
-            <div class="t-line"><span class="t-prompt">›</span><span class="t-stall">stall</span></div>
-            <div class="t-line"><span class="t-prompt">$</span><span class="t-gold">✔ Kejujuran dicatat. Besok tetap lapor.</span></div>
-            <br>
-            <div class="t-line"><span class="t-comment">// Pengguna tidak mengirim apapun</span></div>
-            <div class="t-line"><span class="t-prompt">!</span><span class="t-x">Tidak ada input. Hari ini: X.</span></div>
-            <div class="t-line"><span class="t-prompt">!</span><span class="t-x">Ghosting 1/3. Kontrak dalam risiko.<span class="t-cursor"></span></span></div>
-          </div>
-        </div>
-
-        <div class="doc-sub">Tampilan produk</div>
-
-        <div class="doc-body">
-          <p>Sengaja minimal. Tidak dibuat seperti aplikasi produktivitas modern penuh grafik. Karena sistem menghindari dopamine dashboard, quantified-self obsession, dan gamifikasi.</p>
-          <p>Yang ditampilkan hanya hal yang penting: status, hari aktif, severity, streak, dan mirror perilaku.</p>
-          <p>Visualnya dingin. Sederhana. Langsung. Karena sistem ini tidak dibuat untuk menghibur pengguna ia dibuat untuk menjaga perhatian tetap tertuju pada tindakan nyata.</p>
-        </div>
-
-        <blockquote class="doc-blockquote">
-          confrontation, bukan entertainment.
-        </blockquote>
-      </section>
-
-      <!-- ══════════════════════════
-           § 13 BAGAIMANA SISTEM MENCATAT
-      ══════════════════════════ -->
-      <section class="doc-section" id="s13">
-        <div class="section-num">§ 13</div>
-        <h2 class="section-heading">Bagaimana sistem mencatat dan mengevaluasi perilaku?</h2>
-
-        <div class="doc-body">
-          <p>Silent Enforcer bekerja seperti cermin perilaku. Setiap tindakan kecil pengguna meninggalkan jejak. Dan dari jejak itu, sistem membaca:</p>
-        </div>
-
-        <ul class="doc-list">
-          <li>Apakah ritme mulai terbentuk</li>
-          <li>Apakah konsistensi mulai runtuh</li>
-          <li>Atau apakah seseorang mulai kembali menghilang dari hidupnya sendiri</li>
-        </ul>
-
-        <div class="doc-body">
-          <p>Pengguna tidak diberi sekadar angka. Yang dipantulkan sistem adalah <span class="doc-strong">pola</span>.</p>
-        </div>
-
-        <blockquote class="doc-blockquote">
-          Pola jauh lebih jujur daripada motivasi sesaat.
-        </blockquote>
-
-        <div class="doc-body">
-          <p>Seiring waktu, pengguna mulai melihat sesuatu yang jarang dimiliki banyak orang: rekam jejak nyata, kontinuitas, dan bukti faktual terhadap dirinya sendiri.</p>
-          <p>Bukan berdasarkan perasaan. Tapi berdasarkan apa yang benar-benar diulang setiap hari.</p>
-        </div>
-      </section>
-
-      <!-- ══════════════════════════
-           § 14 INTI SEDERHANA (CLOSING)
+           § 14 INTI
       ══════════════════════════ -->
       <section class="doc-section closing" id="s14">
         <div class="section-num">§ 14</div>
         <h2 class="section-heading" style="color:var(--gold);">Inti Silent Enforcer</h2>
 
         <p class="closing-statement">
-          Silent Enforcer bukan sistem yang mencoba membuat hidup pengguna terasa nyaman.
+          Kamu sudah tahu apa yang seharusnya dilakukan.
         </p>
 
         <p class="closing-statement" style="color:var(--cream);margin-top:0;">
-          Ia dibuat untuk satu tujuan:
+          Masalahnya: kamu menghilang saat harus melakukannya.
         </p>
 
         <blockquote class="closing-quote">
-          memastikan seseorang tidak terus-menerus menghilang dari hal yang sudah dia bilang penting.
+          Sistem ini dibangun untuk satu hal: memastikan seseorang tidak terus-menerus menghilang dari hal yang sudah dia bilang penting.
         </blockquote>
 
         <div class="doc-body">
-          <p>Karena dalam banyak kasus, masa depan seseorang tidak runtuh karena kurang pengetahuan. Tapi karena terlalu sering:</p>
+          <p>Bukan dengan motivasi. Bukan dengan ceramah. Tapi dengan struktur yang tidak peduli alasanmu hari ini.</p>
         </div>
 
         <ul class="closing-list">
-          <li>berhenti,</li>
-          <li>menunda,</li>
-          <li>menghindar,</li>
-          <li>lalu menghilang.</li>
+          <li>hadir tapi gagal → dicatat, dihargai,</li>
+          <li>menghilang → dikonfrontasi,</li>
+          <li>menghilang tiga hari → kontrak mati.</li>
         </ul>
-
-        <div class="doc-body" style="margin-top:2.5rem;">
-          <p>Dan sistem ini dibangun untuk menyerang titik itu agar seseorang <span style="color:var(--gold);font-weight:700;">tetap hadir dan kualitas konsistensinya terus meningkat</span>.</p>
-        </div>
 
         <div class="closing-final">
           Kamu sudah membaca keseluruhan dokumen ini.<br>
-          Tidak ada lagi yang disembunyikan. Tidak ada kejutan.<br>
-          Sekarang satu-satunya pertanyaan yang tersisa adalah milikmu.
+          Satu-satunya pertanyaan yang tersisa adalah milikmu.
         </div>
       </section>
 
